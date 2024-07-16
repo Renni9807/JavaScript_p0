@@ -17,3 +17,7 @@ button {
 #save-btn {
     background-color: skyblue;
 }
+
+#reset-btn {
+    background-color: black;
+}

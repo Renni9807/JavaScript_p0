@@ -28,10 +28,12 @@ let count = 0;
 const h2Part = document.querySelector('#count-el');
 const h2PartSave = document.querySelector('#save-el');
 
+h2Part.textContent = count;
 
 const btn = document.querySelector('#increment-btn');
 const btn2 = document.querySelector('#decrement-btn');
 const saveBtn = document.querySelector('#save-btn')
+const resetBtn = document.querySelector('#reset-btn');
 
 function incremental() {
     if(count == 0) {
@@ -50,13 +52,21 @@ function decremental() {
 }
 
 function saveRecord() {
-    const newNode = document.createTextNode(` ${count} -`);
+    let newText = count + ' - ';    // if the last character is empty space, then you should use textContent. It's brecause innerText only read human readable character
+    h2PartSave.textContent += newText;  
     count = 0;
-    h2PartSave.appendChild(newNode);
     h2Part.textContent = count;
+    restartBtn
     console.log(`${newNode} saved`);
+
+}
+
+function resetFunc() {
+    h2Part.textContent = '0';
+    h2PartSave.textContent = 'previous entries:';
 }
 
 btn.onclick = incremental;
 btn2.onclick = decremental;
 saveBtn.onclick = saveRecord;
+resetBtn.onclick = resetFunc;
