@@ -1,0 +1,16 @@
+button {
+    border: none;
+    padding: 2em;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#increment-btn {
+    background-color: darkred;
+}
+
+#decrement-btn {
+    background-color: darkgreen;
+}
