@@ -4,7 +4,6 @@ button {
     color: white;
     font-weight: bold;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 #increment-btn {
@@ -13,4 +12,8 @@ button {
 
 #decrement-btn {
     background-color: darkgreen;
+}
+
+#save-btn {
+    background-color: skyblue;
 }
